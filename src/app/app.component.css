@@ -1,0 +1,209 @@
+/* Main container: 50% width and centered */
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 16px;
+  background: #fff;
+}
+
+/* Header styling aligned to left */
+.header {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+/* Top controls: date-range pills on left, Print pill on right */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Pill group for date-range buttons */
+.pill-group {
+  display: inline-flex;
+}
+
+.pill-group .pill {
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  color: #444;
+  padding: 6px 16px;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.pill-group .pill.selected {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+/* Attach pills: first and last have rounded corners, remove left border on non-first */
+.pill-group .pill:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.pill-group .pill:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.pill-group .pill:not(:first-child) {
+  border-left: none;
+}
+
+/* Print pill styled as a pill, positioned separately on the right */
+.print-pill {
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  color: #444;
+  padding: 6px 24px; /* Increased width */
+  text-transform: none;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+/* Summary text left aligned */
+.summary-line {
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* Charts container: two cards side by side with spacing */
+.charts-container {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Each chart card occupies 50% of the container width */
+.chart-card {
+  width: 50%;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart header: title and info icon */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px; /* Extra spacing between header and chart */
+  height: 2em;
+}
+
+.chart-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* Info icon styling */
+.info-icon {
+  color: #888;
+}
+
+/* Custom legend wrapper: occupy 60% width and center it */
+.custom-legend-wrapper {
+  width: 60%;
+  margin: 8px auto 0 auto;
+}
+
+/* Custom legend container */
+.custom-legend {
+  position: relative;
+  width: 100%;
+}
+
+/* Legend labels: positioned on top */
+.legend-labels {
+  position: relative;
+  height: 20px;
+}
+
+/* Each label is absolutely positioned; center horizontally */
+.legend-label {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Legend colors row: five equally wide color bars with no gaps */
+.legend-colors {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  margin-top: 4px;
+  gap: 0;
+}
+
+.legend-color {
+  width: 20%;
+  height: 100%;
+  display: block;
+}
+
+.legend-bottom-label {
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+/* GMI average caption placed below the header */
+.gmi-average-caption {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Ensure the chart components occupy full width and height */
+app-time-in-range-chart, app-gmi-chart {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+/* Custom legend for pie chart */
+.custom-legend-pie {
+  position: relative;
+  width: 60%;
+  margin: 8px auto 0 auto;
+}
+
+.custom-legend-pie .legend-labels {
+  position: relative;
+  height: 20px;
+}
+
+.custom-legend-pie .legend-label {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.custom-legend-pie .legend-colors {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  margin-top: 4px;
+  gap: 0;
+}
+
+.custom-legend-pie .legend-color {
+  width: 33.33%;
+  height: 100%;
+  display: block;
+}
